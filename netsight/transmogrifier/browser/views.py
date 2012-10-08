@@ -58,7 +58,7 @@ class Utils(BrowserView):
 
     def do_export(self, path=None):
         if not path:
-            return 'Please provide a path (e.g. path=groups/netsightgroup)'
+            return 'Please provide a path (e.g. path=/plonesite/path/to/folder)'
 
         normpath = path.replace('/', '_')
         if normpath.startswith('_'):
@@ -73,7 +73,7 @@ include = export-netsight
 pipeline += %(pipeid)s
 
 [catalogsource]
-path = query= /Plone/%(path)s
+path = query= %(path)s
 
 [writer]
 path = %(output_dir)s
