@@ -1,0 +1,25 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:five="http://namespaces.zope.org/five"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="netsight.transmogrifier">
+
+  <browser:page
+     name="netsight_do_import"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     class=".views.Utils"
+     attribute="do_import"
+     permission="cmf.ManagePortal"
+     />
+  
+  <browser:page
+     name="netsight_do_export"
+     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+     class=".views.Utils"
+     attribute="do_export"
+     permission="cmf.ManagePortal"
+     />
+  
+
+</configure>
+

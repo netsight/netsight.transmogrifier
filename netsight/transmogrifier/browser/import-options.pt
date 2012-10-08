@@ -1,0 +1,21 @@
+<tal:block define="importids view/available_imports">
+  
+  <form method="post">
+    <h1>Available import items:</h1>
+    <p>
+      <tal:item repeat="importid importids">
+	<input type="radio" name="source_id"
+	       tal:attributes="value importid;
+			       id importid" />
+	<label tal:attributes="for importid"
+	     tal:content="importid" />
+	<br />
+      </tal:item>
+      <em tal:condition="not:importids">No import items available</em>
+    </p>
+    <p tal:condition="importids">
+      <input type="submit" value="Import" />
+    </p>
+  </form>
+
+</tal:block>

@@ -1,0 +1,58 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:five="http://namespaces.zope.org/five"
+   xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier"
+   xmlns:gs="http://namespaces.zope.org/genericsetup"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="netsight.transmogrifier">
+
+  <include package="collective.transmogrifier" file="meta.zcml" />
+  <include package="collective.transmogrifier" />
+  <include package="plone.app.transmogrifier" />
+
+  <include package=".browser" />
+
+  <transmogrifier:registerConfig
+     name="export-netsight"
+     title="netsight export pipeline configuration"
+     description="This is a Plone content export pipeline configuration."
+     configuration="export.cfg"
+     />
+
+  <transmogrifier:registerConfig
+     name="import-netsight"
+     title="netsight import pipeline configuration"
+     description="This is a Plone content import pipeline configuration."
+     configuration="import.cfg"
+     />
+
+  <utility
+     component=".cardboardbox.OrderedManifestExporterSection"
+     name="netsight.transmogrifier.orderedmanifest"
+     />
+
+  <utility
+     component=".cardboardbox.netsightMarshallerSection"
+     name="netsight.transmogrifier.netsightmarshaller"
+     />
+
+  <utility
+     component=".cardboardbox.netsightDataCorrectorSection"
+     name="netsight.transmogrifier.datacorrector"
+     />
+
+  <utility
+     component=".extras.ExtrasExporterSection"
+     name="netsight.transmogrifier.extrasexporter"
+     />
+
+  <utility
+     component=".extras.ExtrasImporterSection"
+     name="netsight.transmogrifier.extrasimporter"
+     />
+
+
+
+
+</configure>
+
