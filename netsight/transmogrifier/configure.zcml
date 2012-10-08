@@ -32,12 +32,12 @@
      />
 
   <utility
-     component=".cardboardbox.netsightMarshallerSection"
+     component=".cardboardbox.MarshallerSection"
      name="netsight.transmogrifier.netsightmarshaller"
      />
 
   <utility
-     component=".cardboardbox.netsightDataCorrectorSection"
+     component=".cardboardbox.DataCorrectorSection"
      name="netsight.transmogrifier.datacorrector"
      />
 
