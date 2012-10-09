@@ -107,13 +107,6 @@ class ExtrasExporterSection(object):
                     local_roles = []
                 if local_roles:
                     extradata['local_roles'] = dict(local_roles)
-                    # skip 'admin' group roles on restricted folders
-                    portal_workflow = getToolByName(obj, 'portal_workflow')
-                    if portal_workflow.getInfoFor(obj, 'review_state', '') \
-                            == 'restricted':
-                        admin_groupid = obj.getAdminUserGroupId()
-                        if admin_groupid in extradata['local_roles'].keys():
-                            del(extradata['local_roles'][admin_groupid])
 
             # dump to pickle
             data = dumps(extradata)
