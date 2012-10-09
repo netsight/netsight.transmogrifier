@@ -10,10 +10,11 @@ old_extractFile = FileExporterSection.extractFile
 
 
 def extractFile(self, obj, field):
-    fname, ct, value = old_extractFile(self, obj, field)
-
-    if fname and not isinstance(fname, unicode):
-        fname = unicode(fname, 'utf-8', 'ignore')
+    raw = obj.getField(field).getRaw(obj)
+    field = obj.getField(field)
+    fname = field.getFilename(obj)
+    ct = field.getContentType(obj)
+    value = str(raw)
 
     return fname, ct, value
 
