@@ -1,9 +1,17 @@
 netsight.transmogrifier
 =======================
 
-Tools and Extensions for collective.transmogrifier
+Tools and Extensions for [collective.transmogrifier](http://pypi.python.org/pypi/collective.transmogrifier/)
 
 This is a work-in-progress egg that provides some example code and utilities for using collective.transmogrifier in large-scale plone sites. Comments, questions, suggestions and forks welcome.
+
+Some familiarity with using collective.transmogrifier is recommended.
+
+These links may help:
+
+[Transmogrifier Intro, Lennart Regebro, PloneConf 2009](http://www.slideshare.net/regebro/transmogrifier-migrating-to-plone-with-less-pain-2387600)
+
+[Quintagroup help/documentation](http://projects.quintagroup.com/products/wiki/quintagroup.transmogrifier)
 
 Installation
 ------------
