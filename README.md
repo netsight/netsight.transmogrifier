@@ -3,6 +3,10 @@ netsight.transmogrifier
 
 Tools and Extensions for [collective.transmogrifier](http://pypi.python.org/pypi/collective.transmogrifier/)
 
+This code was put together to support the talk by Matt Hamilton and Matt Sital-Singh at the 2012 Plone Conference:
+
+[Content migration with transmogrifier: The Good, The Bad and The Ugly](http://www.slideshare.net/mattsitalsingh/content-migration-with-transmogrifier-the-good-the-bad-and-the-ugly)
+
 This is a work-in-progress egg that provides some example code and utilities for using collective.transmogrifier in large-scale plone sites. Comments, questions, suggestions and forks welcome.
 
 Some familiarity with using collective.transmogrifier is recommended.
